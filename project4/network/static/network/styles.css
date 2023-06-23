@@ -1,15 +1,31 @@
 .posts-placement {
+   display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: rgb(239, 239, 239);
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+.new-post-placement {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+ }
+
 .spec-post-placement {
     background-color: rgb(225, 225, 225);
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .spec-post-content {
@@ -26,6 +42,15 @@
     color: white;
     border: 0;
     margin: 0;
+    transition: 0.5s ease;
+}
+
+.post-buttons:hover {
+    background-color: rgb(0, 88, 164);
+}
+
+.post-buttons:active {
+    background-color: rgb(0, 57, 106);
 }
 
 .post-likes {
@@ -36,4 +61,15 @@
 #user-info {
     padding: 10px;
     padding-top: 20px;
+}
+
+.pagination-placement {
+    margin-top: 10px;
+}
+
+.user-profile-info {
+    margin: 7px;
+    background-color: rgb(148, 205, 255);
+    padding: 5px;
+    border-radius: 5px;
 }

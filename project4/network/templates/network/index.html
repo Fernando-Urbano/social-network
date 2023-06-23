@@ -7,7 +7,7 @@
             <div class="col-sm-3 column-flex bg-dark align-items-center text-light" id="user-info">
                 {% if user.is_authenticated %}
                     <div class="justify-content-center align-items-center">
-                        Username: <strong>{{user.username}}</strong>
+                        Username: <strong id="logged_username">{{user.username}}</strong>
                     </div>
                     <div>
                         User e-mail: {{user.email}}
@@ -16,31 +16,26 @@
             </div>
             <div class="col-sm-9" id="network-content">
                 <div class="col-sm-12 d-flex align-items-center flex-column">
-                    <h1>Posts</h1>
-                    <div class="posts-placement col-sm-11 column-flex d-flex align-items-center">
-                        <div class="spec-post-placement col-sm-12 column-flex d-flex flex-column align-items-center">
-                            <div class="col-sm-12 d-flex align-items-center">
-                                <span class="mr-auto"><strong>joanarocha</strong></span>
-                                <span class="text-right">5hs ago</span>
-                            </div>
-                            <div class="spec-post-content col-sm-12 d-flex">
-                                <p>I am now on this social media!!</p>
-                            </div>
-                            <div class="col-sm-12 d-flex">
-                                <div class="col-sm-4 d-flex">
-                                    <button class="post-buttons mr-auto">Like</button>
+                    <h1 id="index_title">Posts</h1>
+                    {% if user.is_authenticated and not following_page %}
+                        <div class="new-post-placement col-sm-11 column-flex align-items-center">
+                            <form class="col-sm-12 column-flex align-items-center justify-content-center" method="post" action="{% url 'add_new_post' %}">
+                                {% csrf_token %}
+                                <textarea id="add-new-post-content" class="col-sm-12 column-flex align-items-center" rows="3" name="new_post_content" placeholder="Write a new post here!"></textarea>
+                                <div class="d-flex justify-content-center">
+                                    <input id="add-new-post-button" class="post-buttons col-sm-2 align-items-center" type="submit" value="Add">
                                 </div>
-                                <div class="post-likes col-sm-4 d-flex justify-content-center align-items-center">
-                                    <span>5 Likes</span>
-                                </div>
-                                <div class="col-sm-4 d-flex">
-                                    <button class="post-buttons ml-auto">Edit</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                    </div>
+                    {% endif %}
+                    <div class="posts-placement col-sm-11 column-flex align-items-center"></div>
+                    <div class="pagination-placement align-items-center">
+                        <ul class="pagination"></ul>
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
 {% endblock %}
+
+

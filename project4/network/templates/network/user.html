@@ -1,0 +1,55 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 column-flex bg-dark align-items-center text-light" id="user-info">
+                {% if user.is_authenticated %}
+                    <div class="justify-content-center align-items-center">
+                        Username: <strong>{{ user.username }}</strong>
+                    </div>
+                    <div>
+                        User e-mail: {{ user.email }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-sm-9" id="network-content">
+                <div class="col-sm-12 d-flex align-items-center flex-column">
+                    <div class="user-profile-info col-sm-6 align-items-center d-flex flex-column">
+                        <h1>{{ searched_user.first_name }} {{ searched_user.last_name }}</h1>
+                        <h2>{{ searched_user.username }}</h2>
+                        <h6>E-mail: {{ searched_user.email }}</h6>
+                        <span>Following: {{ searched_user.number_following }} | Followers: {{ searched_user.number_followers }}</span>
+                    </div>
+                    {% if user.id == searched_user.id %}
+                        <div class="new-post-placement col-sm-11 column-flex align-items-center">
+                            <form class="col-sm-12 column-flex align-items-center justify-content-center" method="post" action="{% url 'add_new_post' %}">
+                                {% csrf_token %}
+                                <textarea class="col-sm-12 column-flex align-items-center" rows="3" name="new_post_content" placeholder="Write a new post here!"></textarea>
+                                <div class="d-flex justify-content-center">
+                                    <input class="post-buttons col-sm-2 align-items-center" type="submit" value="Add">
+                                </div>
+                            </form>
+                        </div>
+                    {% endif %}
+                    {% if user.is_authenticated and user.id != searched_user.id %}
+                        <div class="col-sm-6 align-items-center d-flex flex-column">
+                            <form method="post" action="{% url 'follow_unfollow_user' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="searched_user_id" value="{{ searched_user.id }}">
+                                {% if following %}
+                                    <input type="submit" value="Unfollow">
+                                {% else %}
+                                    <input type="submit" value="Follow">
+                                {% endif %}
+                            </form>
+                        </div>
+                    {% endif %}
+                    <div class="posts-placement col-sm-11 column-flex d-flex align-items-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

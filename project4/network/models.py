@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+import math
 from datetime import date, datetime
 
 
@@ -19,7 +20,7 @@ def time_since_date(specified_date):
     hours = minutes / 60
     if hours < 24:
         hours = math.floor(hours)
-        return f"{hours:.0f}h ago"
+        return f"{hours:.0f}h ago" if hours == 1 else f"{hours:.0f}hs ago"
     return specified_date.strftime("%d/%m/%Y")
 
 
@@ -36,11 +37,11 @@ class User(AbstractUser):
 
     @property
     def number_followers(self):
-        return len(self.followed_by)
+        return len(self.followed_by.all())
 
     @property
     def number_following(self):
-        return len(self.users_following)
+        return len(self.users_following.all())
 
     @property
     def number_post_watching(self):
