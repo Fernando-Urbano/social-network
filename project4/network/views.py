@@ -178,6 +178,21 @@ def like_unlike_post(request):
     post.save()
 
 
+@csrf_exempt
+def submit_post_change(request):
+    data = json.loads(request.body)
+    user = request.user
+    logging.info("Requested to submit change in post.")
+    post_id = int(data.get('post_id'))
+    logging.debug("Got post id")
+    post = Post.objects.get(pk=post_id)
+    if post.user != user:
+        raise PermissionError(f"Logged user ({user.username}) is only allowed to change his own post.")
+    post.content = data.get('new_content')
+    post.save()
+    return JsonResponse({'message': f"{user.username} edited post {post_id}."})
+
+
 def view_user(request, username):
     logged_user = request.user
     try:

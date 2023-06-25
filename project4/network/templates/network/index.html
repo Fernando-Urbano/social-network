@@ -21,9 +21,9 @@
                         <div class="new-post-placement col-sm-11 column-flex align-items-center">
                             <form class="col-sm-12 column-flex align-items-center justify-content-center" method="post" action="{% url 'add_new_post' %}">
                                 {% csrf_token %}
-                                <textarea id="add-new-post-content" class="col-sm-12 column-flex align-items-center" rows="3" name="new_post_content" placeholder="Write a new post here!"></textarea>
+                                <textarea id="add-new-post-content" class="post-textareas col-sm-12 column-flex align-items-center" rows="3" name="new_post_content" placeholder="Write a new post here!"></textarea>
                                 <div class="d-flex justify-content-center">
-                                    <input id="add-new-post-button" class="post-buttons col-sm-2 align-items-center" type="submit" value="Add">
+                                    <input id="add-new-post-button" class="disabled-post-buttons col-sm-2 align-items-center" type="submit" value="Add" disabled>
                                 </div>
                             </form>
                         </div>
