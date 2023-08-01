@@ -41,12 +41,12 @@ Users can to click an “Edit” button or link on any of their own posts to edi
 - The user can then “Save” the edited post. Using JavaScript, we achieve this without requiring a reload of the entire page.
 - For security, we ensure that your application is designed such that it is not possible for a user, via any route, to edit another user’s posts.
 
-<img width="626" alt="image" src="https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/d88871dd-5aaa-456d-bb9d-cbfe99fd03ea">
+![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/a3ddb750-0ef7-4573-8346-8120705de521)
 
 ## Like and Unlike
 Users can click a button or link on any post to toggle whether or not they “like” that post.
 - Using JavaScript, we asynchronously let the server know to update the like count (as via a call to fetch) and then update the post’s like count displayed on the page, without requiring a reload of the entire page.
 
-![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/a3ddb750-0ef7-4573-8346-8120705de521)
+<img width="626" alt="image" src="https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/d88871dd-5aaa-456d-bb9d-cbfe99fd03ea">
 
 
