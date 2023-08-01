@@ -1,4 +1,4 @@
-# Social Network
+![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/dc4ce3bf-8a8b-4927-aa27-3012e8503067)# Social Network
 This is project number 4 of the CS50 Web Development course with Django and JavaScript lectured by Harvard CS department.
 
 ## Screencast of project
@@ -34,4 +34,18 @@ The “Following” link in the navigation bar takes the user to a page where th
 On any page that displays posts, posts are displayed 10 on a page. If there are more than ten posts, a “Next” button appears to take the user to the next page of posts (which is older than the current page of posts). If not on the first page, a “Previous” button appears to take the user to the previous page of posts as well.
 
 ![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/ec108351-289c-4a8d-aaeb-98877fdbee18)
+
+## Edit Post
+Users can to click an “Edit” button or link on any of their own posts to edit that post.
+- When a user clicks “Edit” for one of their own posts, the content of their post is replaced with a textarea where the user can edit the content of their post.
+- The user can then “Save” the edited post. Using JavaScript, we achieve this without requiring a reload of the entire page.
+- For security, we ensure that your application is designed such that it is not possible for a user, via any route, to edit another user’s posts.
+
+<img width="626" alt="image" src="https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/d88871dd-5aaa-456d-bb9d-cbfe99fd03ea">
+
+## Like and Unlike
+Users can click a button or link on any post to toggle whether or not they “like” that post.
+- Using JavaScript, we asynchronously let the server know to update the like count (as via a call to fetch) and then update the post’s like count displayed on the page, without requiring a reload of the entire page.
+
+![Uploading image.png…]()
 
