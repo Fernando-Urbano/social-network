@@ -28,12 +28,12 @@ The “Following” link in the navigation bar takes the user to a page where th
 - This page behaves just as the “All Posts” page does, just with a more limited set of posts.
 - This page is only be available to users who are signed in.
 
-![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/3dfaddd6-288d-43eb-b04f-27b427344c20)
+![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/ec108351-289c-4a8d-aaeb-98877fdbee18)
 
 ## Pagination
 On any page that displays posts, posts are displayed 10 on a page. If there are more than ten posts, a “Next” button appears to take the user to the next page of posts (which is older than the current page of posts). If not on the first page, a “Previous” button appears to take the user to the previous page of posts as well.
 
-![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/ec108351-289c-4a8d-aaeb-98877fdbee18)
+![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/3dfaddd6-288d-43eb-b04f-27b427344c20)
 
 ## Edit Post
 Users can to click an “Edit” button or link on any of their own posts to edit that post.
