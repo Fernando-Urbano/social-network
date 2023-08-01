@@ -1,4 +1,4 @@
-![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/dc4ce3bf-8a8b-4927-aa27-3012e8503067)# Social Network
+# Social Network
 This is project number 4 of the CS50 Web Development course with Django and JavaScript lectured by Harvard CS department.
 
 ## Screencast of project
