@@ -2,6 +2,7 @@
 This is project number 4 of the CS50 Web Development course with Django and JavaScript lectured by Harvard CS department.
 
 ## Screencast of project
+https://www.youtube.com/watch?v=mrBkMG5RAos
 
 ## New Post
 Users who are signed can to write a new text-based post by filling in text into a text area and then clicking a button to submit the post.
