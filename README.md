@@ -47,5 +47,6 @@ Users can to click an “Edit” button or link on any of their own posts to edi
 Users can click a button or link on any post to toggle whether or not they “like” that post.
 - Using JavaScript, we asynchronously let the server know to update the like count (as via a call to fetch) and then update the post’s like count displayed on the page, without requiring a reload of the entire page.
 
-![Uploading image.png…]()
+![image](https://github.com/Fernando-Urbano/cs50w-p4-network/assets/99626376/a3ddb750-0ef7-4573-8346-8120705de521)
+
 
