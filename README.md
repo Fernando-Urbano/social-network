@@ -2,7 +2,9 @@
 This is project number 4 of the CS50 Web Development course with Django and JavaScript lectured by Harvard CS department.
 
 ## Screencast of project
-https://www.youtube.com/watch?v=mrBkMG5RAos
+Click on the image to be redirected to a video of the program working on youtube.
+
+[![image](https://github.com/Fernando-Urbano/social-network/assets/99626376/3efefcc8-cfe0-4d50-b2a7-4053e136f46e)](https://www.youtube.com/watch?v=mrBkMG5RAos)
 
 ## New Post
 Users who are signed can to write a new text-based post by filling in text into a text area and then clicking a button to submit the post.
